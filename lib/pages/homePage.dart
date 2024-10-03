@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             );
           } else if (snapshot.hasError) {
             return Center(
-              child: Text('Erro ao acessar API!'),
+              child: Text('Erro ao acessar API! ${snapshot.error}'),
             );
           } else if (snapshot.hasData) {
             final heros = snapshot.data!;

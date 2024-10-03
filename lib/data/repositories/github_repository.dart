@@ -5,10 +5,12 @@ class HerosUsers {
   final Dio _dio = Dio();
 
   static const apiUrl = 'https://superheroapi.com/';
+  static const apiKey = '6c60ce2e93f4d99e80189e7f0d586a26';
+
 
   Future<List<GithubUserModel>> fetchHeroInformation() async {
     const String allHerosUrl =
-        'https://superheroapi.com/api/access-token/search/name';
+        '$apiUrl/$apiKey/search/name';
 
     try {
       final response = await _dio.get(allHerosUrl);
